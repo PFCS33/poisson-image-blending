@@ -27,7 +27,7 @@ Built for **CMPT 742: Practices in Visual Computing I** at Simon Fraser Universi
 - **OpenCV** — image I/O, Laplacian computation, interactive GUI (mouse callbacks, keyboard events)
 - **Matplotlib** — result visualization and comparison plots
 
----
+
 
 ## Part 1 — Image Reconstruction from Second-Order Derivatives
 
@@ -67,7 +67,7 @@ Configure via variables at the top of `reconstruction.py`:
 - `AUTO_CORNER` — use original corner values (`True`) or set manually (`False`)
 - `CORNER_VALUES` — manual corner intensities when `AUTO_CORNER=False`
 
----
+
 
 ## Part 2 — Poisson Image Blending (Seamless Cloning)
 
@@ -112,7 +112,7 @@ Interactive controls during alignment:
 
 Configure `SOURCE_PATH` and `TARGET_PATH` at the top of `main.py`.
 
----
+
 
 ## Project Structure
 
