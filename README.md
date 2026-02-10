@@ -1,8 +1,32 @@
 # Image Reconstruction & Poisson Blending
 
-Sparse linear algebra meets image editing. This project implements two foundational computer vision algorithms from scratch — rebuilding images from their derivatives and blending patches seamlessly into new scenes.
+![Python](https://img.shields.io/badge/Python-3.x-3776AB?logo=python&logoColor=white)
+![NumPy](https://img.shields.io/badge/NumPy-013243?logo=numpy&logoColor=white)
+![SciPy](https://img.shields.io/badge/SciPy-8CAAE6?logo=scipy&logoColor=white)
+![OpenCV](https://img.shields.io/badge/OpenCV-5C3EE8?logo=opencv&logoColor=white)
+![Computer Vision](https://img.shields.io/badge/Computer%20Vision-FF6F00)
+![Poisson Equation](https://img.shields.io/badge/Poisson%20Equation-2E8B57)
+![Sparse Linear Algebra](https://img.shields.io/badge/Sparse%20Linear%20Algebra-8B0000)
+
+Sparse linear algebra meets image editing. This project implements two foundational computer vision algorithms **from scratch** — **rebuilding images** from their **derivatives** and **blending patches** seamlessly into new scenes.
 
 Built for **CMPT 742: Practices in Visual Computing I** at Simon Fraser University.
+
+## Technical Highlights
+
+- Formulating image processing problems as **sparse linear systems**
+- Building and solving large sparse matrices efficiently with **SciPy**
+- The mathematics behind Poisson editing — why **gradient-domain** methods produce seamless blends
+- Handling boundary conditions correctly in discrete PDE solvers
+- Interactive **OpenCV GUI** for mask selection and geometric alignment
+
+## Tech Stack
+
+- **Python 3** — core language
+- **NumPy** — array operations and linear algebra
+- **SciPy** — sparse matrix construction (`lil_matrix`, `csr_matrix`) and direct solving (`spsolve`)
+- **OpenCV** — image I/O, Laplacian computation, interactive GUI (mouse callbacks, keyboard events)
+- **Matplotlib** — result visualization and comparison plots
 
 ---
 
@@ -91,14 +115,6 @@ Configure `SOURCE_PATH` and `TARGET_PATH` at the top of `main.py`.
 
 ---
 
-## Tech Stack
-
-- **Python 3** — core language
-- **NumPy** — array operations and linear algebra
-- **SciPy** — sparse matrix construction (`lil_matrix`, `csr_matrix`) and direct solving (`spsolve`)
-- **OpenCV** — image I/O, Laplacian computation, interactive GUI (mouse callbacks, keyboard events)
-- **Matplotlib** — result visualization and comparison plots
-
 ## Project Structure
 
 ```
@@ -117,14 +133,6 @@ Configure `SOURCE_PATH` and `TARGET_PATH` at the top of `main.py`.
 │   └── results/                            # Blended outputs
 └── README.md
 ```
-
-## What I Learned
-
-- Formulating image processing problems as **sparse linear systems**
-- Building and solving large sparse matrices efficiently with **SciPy**
-- The mathematics behind Poisson editing — why **gradient-domain** methods produce seamless blends
-- Handling boundary conditions correctly in discrete PDE solvers
-- Interactive **OpenCV GUI** for mask selection and geometric alignment
 
 ## License
 
