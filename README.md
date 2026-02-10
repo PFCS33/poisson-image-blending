@@ -4,7 +4,6 @@
 ![NumPy](https://img.shields.io/badge/NumPy-013243?logo=numpy&logoColor=white)
 ![SciPy](https://img.shields.io/badge/SciPy-8CAAE6?logo=scipy&logoColor=white)
 ![OpenCV](https://img.shields.io/badge/OpenCV-5C3EE8?logo=opencv&logoColor=white)
-![Computer Vision](https://img.shields.io/badge/Computer%20Vision-FF6F00)
 ![Poisson Equation](https://img.shields.io/badge/Poisson%20Equation-2E8B57)
 ![Sparse Linear Algebra](https://img.shields.io/badge/Sparse%20Linear%20Algebra-8B0000)
 
