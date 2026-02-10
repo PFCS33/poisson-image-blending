@@ -12,7 +12,7 @@ Given only the second-order derivatives of an image, can we recover the original
 
 ### How It Works
 
-The discrete Laplacian at each pixel gives us one linear equation. Stack all pixels together, and we get a large sparse system. Four corner pixels are pinned to known values so the system has a unique solution.
+The discrete **Laplacian** at each pixel gives us one linear equation. Stack all pixels together, and we get a large sparse system. Four corner pixels are pinned to known values so the system has a unique solution.
 
 Boundary pixels near edges use partial derivative stencils (horizontal-only or vertical-only) instead of the full 4-neighbor Laplacian. This keeps the matrix well-conditioned.
 
@@ -22,12 +22,7 @@ The solver uses `scipy.sparse.linalg.spsolve` on a CSR-format sparse matrix.
 
 All reconstructions achieve near-zero residual error (order of 1e-12), confirming the solver works correctly.
 
-<!--
-  📸 IMAGE PLACEHOLDER: reconstruction_comparison.png
-  Suggested image: a 2×2 grid showing original vs. reconstructed for two test images
-  (e.g., the moon image and the pagoda image side by side with their reconstructions).
-  You can screenshot or export from the report.pdf in Reconstruction/report.pdf
--->
+![Reconstruction: Original vs Reconstructed](demo/demo_reconstruction.png)
 
 | Test Image | Resolution | Residual ‖Av − b‖ |
 |:----------:|:----------:|:------------------:|
@@ -67,13 +62,7 @@ The key insight: by matching gradients rather than raw pixel values, the blended
 
 Two experiments blend different source patches into a Shanghai night skyline photo. Both achieve near-zero solver residuals.
 
-<!--
-  📸 IMAGE PLACEHOLDER: poisson_blending_result.png
-  Suggested image: a side-by-side comparison showing:
-  Left — the source image with the selected patch highlighted
-  Right — the blended result in the target scene
-  You can export from Poisson Blending/report.pdf or use the images in results/
--->
+![Poisson Blending: Source + Target → Seamless Result](demo/demo_blend.png)
 
 | Source | Blended Into | Residual ‖Av − b‖ |
 |:------:|:------------:|:------------------:|
@@ -131,11 +120,11 @@ Configure `SOURCE_PATH` and `TARGET_PATH` at the top of `main.py`.
 
 ## What I Learned
 
-- Formulating image processing problems as sparse linear systems
-- Building and solving large sparse matrices efficiently with SciPy
-- The mathematics behind Poisson editing — why gradient-domain methods produce seamless blends
+- Formulating image processing problems as **sparse linear systems**
+- Building and solving large sparse matrices efficiently with **SciPy**
+- The mathematics behind Poisson editing — why **gradient-domain** methods produce seamless blends
 - Handling boundary conditions correctly in discrete PDE solvers
-- Interactive OpenCV GUI for mask selection and geometric alignment
+- Interactive **OpenCV GUI** for mask selection and geometric alignment
 
 ## License
 
